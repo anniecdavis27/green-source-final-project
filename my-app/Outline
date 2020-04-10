@@ -1,0 +1,26 @@
+"Articles"
+Three text boxes
+- Title - Mandatory
+- Snippet - Mandatory
+- Link - Mandatory
+Submit -- this is a form, submit button is more of a save button
+
+ArticleList contains this form^^^, list of articles comes from the ArticleContainer
+
+In each listing on main page:
+Title
+"See More" button
+"delete button"
+
+Once "See more" is clicked, modal renders with Title, Snippet, and link to full article.
+
+ArticleItem
+renders the modal, with the item details if button is clicked
+the only stateful thing in ArticleItem is the the modal hook
+
+step 1: build the form
+step 2: make sure the right thing renders
+step 3: create the modal component
+step 4: use the modal inside the article item
+
+DUE April 20th!!!!!!!!!!!!!!!
