@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import { ArticleItem } from '../ArticleItem';
+import { ArticleItem } from '../ArticleItem';
 import firebase from '../../firebase';
 
 class ArticleList extends React.Component {
@@ -47,25 +47,25 @@ class ArticleList extends React.Component {
       articleSnippet: '',
       articleLink: ''
     }));
-    
+
     console.log(this.state)
   }
 
   render () {
     return (
 <>
-  <h1>Add Articles</h1>
-    <form onSubmit={this.handleSubmit}>
+  <h1 className = "list-header">Add Articles</h1>
+    <form className="add-form" onSubmit={this.handleSubmit}>
       <label>Title:</label>
-      <input id="articleTitle" Type="text" name="articleTitle" onChange={this.handleInput} />
+      <input id="articleTitle" type="text" name="articleTitle" onChange={this.handleInput} />
         <br />
       <label>Snippet:</label>
-      <input id="articleSnippet" Type="text" name="articleSnippet" onChange={this.handleInput} />
+      <input id="articleSnippet" type="text" name="articleSnippet" onChange={this.handleInput} />
         <br />
       <label>Link:</label>
-      <input id="articleLink" Type="text" name="articleLink" onChange={this.handleInput} />
+      <input id="articleLink" type="text" name="articleLink" onChange={this.handleInput} />
         <br />
-      <input type="submit" value="Submit" />
+      <input className="trigger" type="submit" value="Submit" />
     </form>
 
     </>

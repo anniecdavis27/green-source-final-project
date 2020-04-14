@@ -5,7 +5,14 @@ class ArticleItem extends React.Component {
   render() {
     const { article } = this.props;
     return (
-  //This needs to return objects by  title, and "see details" button, that opens modal with Title, snippet, and Link
+  <div className="article-listings">
+    <div className="listings-header">
+      <h1>Articles:</h1>
+    </div>
+    <div className="listings">
+
+    </div>
+  </div>
     );
   }
 }

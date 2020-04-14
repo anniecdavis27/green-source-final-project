@@ -1,13 +1,13 @@
 import firebase from 'firebase';
 
 const config = {
-      apiKey: "AIzaSyAhXEmmoCZESAAOR-7AzBg4g6O9AFRtkvI",
-      authDomain: "environewsapp.firebaseapp.com",
-      databaseURL: "https://environewsapp.firebaseio.com",
-      projectId: "environewsapp",
-      storageBucket: "environewsapp.appspot.com",
-      messagingSenderId: "1017973522753",
-      appId: "1:1017973522753:web:dbd0b940892ecea4b8a1c0"
+  apiKey: "AIzaSyDUZiAnkbBAPoXINQrIp1v4b3TFRmAFXEo",
+  authDomain: "enviroapptwo.firebaseapp.com",
+  databaseURL: "https://enviroapptwo.firebaseio.com",
+  projectId: "enviroapptwo",
+  storageBucket: "enviroapptwo.appspot.com",
+  messagingSenderId: "81673518823",
+  appId: "1:81673518823:web:1fde9a7f991acfd134ec42"
 }
 
 firebase.initializeApp(config);
