@@ -7,37 +7,37 @@ class ArticlesContainer extends Component {
     super(props);
 
     this.state = {
-      articles: []
+      articles: [],
     };
 }
 
 componentDidMount() {
   const articlesRef = firebase.database().ref('articles');
   articlesRef.on('value', snapshot => {
-      let articles = snapshot.val();
-      if (articles) {
-      const articlesFromDB = Object.entries(articles).map(article => ({
-          id: article[0],
-          articleLink: article[1],
-          article
-        }));
+    let articles = snapshot.val();
 
-        this.setState({
-          articles: articlesFromDB
-        });
-      } else {
-        this.setState({
-        articles: []
-      });
-    }
-  });
+  const articlesFromDB = Object.entries(articles).map(article => {
+    console.log('article from entries:', article)
+
+    return ({
+      id: article[0],
+      title: article[1].articleTitle,
+      snippet: article[1].articleSnippet,
+      link: article[1].articleLink
+      })
+    })
+    this.setState({
+      articles: articlesFromDB
+
+    })
+  })
 }
 
 setArticles = newArticles => {
-    this.setState({
-      Articles: newArticles
-    });
-  };
+  this.setState({
+    articles: newArticles
+  });
+};
 
 render() {
   const { articles } = this.state;
