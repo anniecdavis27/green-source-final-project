@@ -10,23 +10,11 @@ class ArticleList extends React.Component {
     this.state = {
       articleTitle: '',
       articleSnippet: '',
+      articleSource: '',
       articleLink: ''
     };
     this.handleInput = this.handleInput.bind(this);
   }
-// Create function that allows you to input 3 things: Title, Snippet, Link
-
-  // handleNewArticle = e => {
-  //   if (e.key === 'Enter') {
-  //     const articlesRef = firebase.database().ref('articles');
-  //     const val = e.target.value;
-  //     const article = {
-  //       articleTitle: val
-  //     };
-  //     articlesRef.push(article);
-  //   };
-  //
-  // }
 
   handleInput = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -38,6 +26,7 @@ class ArticleList extends React.Component {
     const newArticle = {
       articleTitle: this.state.articleTitle,
       articleSnippet: this.state.articleSnippet,
+      articleSource: this.state.articleSource,
       articleLink: this.state.articleLink
     };
     articlesRef.push(newArticle);
@@ -45,6 +34,7 @@ class ArticleList extends React.Component {
     this.setState(prevValue => ({
       articleTitle: '',
       articleSnippet: '',
+      articleSource: '',
       articleLink: ''
     }));
 
@@ -62,11 +52,15 @@ class ArticleList extends React.Component {
       <label>Snippet:</label>
       <input id="articleSnippet" type="text" name="articleSnippet" onChange={this.handleInput} />
         <br />
+        <label>Source:</label>
+        <input id="articleSource" type="text" name="articleSource" onChange={this.handleInput} />
+          <br />
       <label>Link:</label>
       <input id="articleLink" type="text" name="articleLink" onChange={this.handleInput} />
         <br />
       <input className="trigger" type="submit" value="Submit" />
     </form>
+
 
     </>
     );

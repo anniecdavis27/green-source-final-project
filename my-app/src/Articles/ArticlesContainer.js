@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ArticleList } from './ArticleList';
+import { ArticleItem } from './ArticleItem';
 import firebase from '../firebase';
 
 class ArticlesContainer extends Component {
@@ -23,6 +24,7 @@ componentDidMount() {
       id: article[0],
       title: article[1].articleTitle,
       snippet: article[1].articleSnippet,
+      source: article[1].articleSource,
       link: article[1].articleLink
       })
     })
@@ -41,8 +43,14 @@ setArticles = newArticles => {
 
 render() {
   const { articles } = this.state;
-  return <ArticleList articles={articles} />;
-  }
+  return (
+    <div>
+      <ArticleList articles={articles} />
+      <ArticleItem articles={articles} />
+    </div>
+  )
+}
+
 }
 
 export { ArticlesContainer };

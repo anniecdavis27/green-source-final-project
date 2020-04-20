@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .will-be-logo {
   color: #336600;
   font-family: 'Helvetica';
@@ -30,14 +16,35 @@ code {
 .add-form {
   font-size: 20px;
   font-family: 'Helvetica';
-  border-style: dashed;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .trigger {
   background-color: #4d4d4d;
   border: none;
-  font-size: 14pwdpx;
+  font-size: 16px;
   font-family: 'Helvetica';
   font-weight: lighter;
   color: #ffffff;
+  cursor: crosshair;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.trigger:hover {
+  background-color: #b7c7b7;
+  color: #000000;
+}
+
+.inputContent {
+  font-family: 'Helvetica';
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 20px;
 }
