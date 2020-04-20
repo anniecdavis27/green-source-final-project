@@ -1,6 +1,6 @@
 import React from 'react';
 import { ToggleState } from '../ToggleState/ToggleState';
-import firebase from '../../firebase';
+//import firebase from '../../firebase';
 
 class ArticleItem extends React.Component {
 
@@ -47,9 +47,9 @@ class ArticleItem extends React.Component {
 //       articleLink: ''
 //     }));
 //}
-
+//const { article } = this.props;
   render() {
-    const { article } = this.props;
+
     return (
       <div>
         {this.props.articles.map(article => {

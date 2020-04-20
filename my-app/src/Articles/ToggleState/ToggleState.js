@@ -52,7 +52,7 @@ class ToggleState extends React.Component {
 
     if (this.state.isEditable === true) {
     return (
-      <div className="add-form">
+      <div className = "add-form">
         <h1 className = "list-header">Update</h1>
         <label>Title:</label>
         <input id="articleTitle2" type="text" name="articleTitle" onChange={() => this.handleUpdate(article.id)} />
@@ -67,8 +67,8 @@ class ToggleState extends React.Component {
         <input id="articleLink2" type="text" name="articleLink" onChange={() => this.handleUpdate(article.id)} />
         <br />
         <br />
-        <button className="trigger" onClick={() => this.toggleState()}>Cancel</button>
-        <button className="trigger" onClick={() => this.handleUpdate(article.id)} onClick={() => this.toggleState()}>Save</button>
+        <button className="trigger" onClick={() => this.handleUpdate(article.id)}>Save</button>
+        <button className="trigger" onClick={() => this.toggleState()}>Close</button>
       </div>
     )} else {
     return (

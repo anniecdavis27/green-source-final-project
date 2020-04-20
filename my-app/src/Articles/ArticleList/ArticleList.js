@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ArticleItem } from '../ArticleItem';
+//import { ArticleItem } from '../ArticleItem';
 import firebase from '../../firebase';
 
 class ArticleList extends React.Component {
